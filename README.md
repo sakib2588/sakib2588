@@ -103,6 +103,7 @@ flowchart LR
 - [EC-Council Network Defense Essentials](https://www.coursera.org/account/accomplishments/verify/UJ19ZORDK6KA) — verified
 - [Stanford / DeepLearning.AI — Supervised Machine Learning](https://www.coursera.org/account/accomplishments/verify/AZCMFN532NYG) — verified
 - [Linux for LFCA (LearnQuest) — 4-course Specialization](https://coursera.org/verify/specialization/WIYTXTEY3JMX) — verified
+- [Solving Problems with Creative and Critical Thinking (IBM)](https://www.coursera.org/account/accomplishments/verify/EELUDQREPQ8C) — verified
 
 ---
 
