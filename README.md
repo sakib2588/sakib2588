@@ -97,7 +97,9 @@ flowchart LR
 
 ## Certifications
 
-- Google Cybersecurity Professional Certificate
+[<img src="https://images.credly.com/size/110x110/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" width="100" alt="Google Cybersecurity Professional Certificate" />](https://www.credly.com/badges/1c5e3389-768d-44a6-92e8-c92211e55627/public_url)
+
+- [Google Cybersecurity Professional Certificate](https://www.credly.com/badges/1c5e3389-768d-44a6-92e8-c92211e55627/public_url) — verified badge
 - EC-Council Network Defense Essentials
 - Linux for LFCA (LearnQuest)
 - Stanford / DeepLearning.AI — Supervised Machine Learning
