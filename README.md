@@ -102,7 +102,7 @@ flowchart LR
 - [Google Cybersecurity Professional Certificate](https://www.credly.com/badges/1c5e3389-768d-44a6-92e8-c92211e55627/public_url) — verified badge
 - [EC-Council Network Defense Essentials](https://www.coursera.org/account/accomplishments/verify/UJ19ZORDK6KA) — verified
 - [Stanford / DeepLearning.AI — Supervised Machine Learning](https://www.coursera.org/account/accomplishments/verify/AZCMFN532NYG) — verified
-- Linux for LFCA (LearnQuest)
+- [Linux for LFCA (LearnQuest) — 4-course Specialization](https://coursera.org/verify/specialization/WIYTXTEY3JMX) — verified
 
 ---
 
