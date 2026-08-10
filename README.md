@@ -124,15 +124,21 @@ flowchart LR
 
 [<img src="https://images.credly.com/size/110x110/images/0bf0f2da-a699-4c82-82e2-56dcf1f2e1c7/image.png" width="100" alt="Google Cybersecurity Professional Certificate" />](https://www.credly.com/badges/1c5e3389-768d-44a6-92e8-c92211e55627/public_url)
 
-**Cisco Networking Academy — CCNA course track (all three, completed Aug 2026)**
+### Cisco Networking Academy — CCNA course track (complete, Aug 2026)
 
-- CCNA: Introduction to Networks (ITN)
-- CCNA: Switching, Routing, and Wireless Essentials (SRWE)
-- CCNA: Enterprise Networking, Security, and Automation (ENSA)
+![ITN](https://img.shields.io/badge/CCNA-Introduction_to_Networks_(ITN)-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
+![SRWE](https://img.shields.io/badge/CCNA-Switching,_Routing_&_Wireless_Essentials_(SRWE)-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
+![ENSA](https://img.shields.io/badge/CCNA-Enterprise_Networking,_Security_&_Automation_(ENSA)-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
 
-These are Cisco Networking Academy course badges, not the CCNA 200-301 certification. The 200-301 exam is booked for 14 September 2026.
+| Course badge | Covers | Where I applied it |
+|---|---|---|
+| **ITN** — Introduction to Networks | IPv4/IPv6 addressing, subnetting, Ethernet, the protocol stack, Cisco IOS basics | Addressing plan and VLAN design in the [MikroTik ISP lab](https://github.com/sakib2588/mikrotik-isp-lab) |
+| **SRWE** — Switching, Routing, and Wireless Essentials | VLANs, trunking, STP, EtherChannel, inter-VLAN routing, DHCP, WLAN, first-hop redundancy | Tagged VLAN 100 access network and DHCP-served subscriber LAN in the same lab |
+| **ENSA** — Enterprise Networking, Security, and Automation | OSPF, ACLs, NAT, WAN technologies, QoS, network security, SNMP, automation | Stateful firewall, masquerade NAT, PCQ shaping and SNMP polling on the provider edge |
 
-**Other**
+All three completed through Cisco Networking Academy and issued 9 August 2026. These are course badges, not the CCNA 200-301 certification — that exam is booked for 14 September 2026.
+
+### Other
 
 - [Google Cybersecurity Professional Certificate](https://www.credly.com/badges/1c5e3389-768d-44a6-92e8-c92211e55627/public_url) — verified badge
 - [EC-Council Network Defense Essentials](https://www.coursera.org/account/accomplishments/verify/UJ19ZORDK6KA) — verified
