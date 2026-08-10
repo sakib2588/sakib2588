@@ -126,9 +126,9 @@ flowchart LR
 
 ### Cisco Networking Academy — CCNA course track (complete, Aug 2026)
 
-![ITN](https://img.shields.io/badge/CCNA-Introduction_to_Networks_(ITN)-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
-![SRWE](https://img.shields.io/badge/CCNA-Switching,_Routing_&_Wireless_Essentials_(SRWE)-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
-![ENSA](https://img.shields.io/badge/CCNA-Enterprise_Networking,_Security_&_Automation_(ENSA)-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
+<img src="assets/badges/ccna-itn.png" width="100" alt="CCNA: Introduction to Networks" />&nbsp;&nbsp;
+<img src="assets/badges/ccna-srwe.png" width="100" alt="CCNA: Switching, Routing, and Wireless Essentials" />&nbsp;&nbsp;
+<img src="assets/badges/ccna-ensa.png" width="100" alt="CCNA: Enterprise Networking, Security, and Automation" />
 
 | Course badge | Covers | Where I applied it |
 |---|---|---|
