@@ -127,16 +127,16 @@ flowchart LR
 ### Cisco Networking Academy — CCNA course track (complete, Aug 2026)
 
 <a href="https://www.credly.com/badges/3a056378-cca0-47da-82e9-16a7086a0fbd/public_url"><img src="assets/badges/ccna-itn.png" width="100" alt="CCNA: Introduction to Networks" /></a>&nbsp;&nbsp;
-<img src="assets/badges/ccna-srwe.png" width="100" alt="CCNA: Switching, Routing, and Wireless Essentials" />&nbsp;&nbsp;
+<a href="https://www.credly.com/badges/749440df-451c-4607-b923-89590976b371/public_url"><img src="assets/badges/ccna-srwe.png" width="100" alt="CCNA: Switching, Routing, and Wireless Essentials" /></a>&nbsp;&nbsp;
 <a href="https://www.credly.com/badges/5de94878-6906-4620-a076-efd961cf3d82/public_url"><img src="assets/badges/ccna-ensa.png" width="100" alt="CCNA: Enterprise Networking, Security, and Automation" /></a>
 
 | Course badge | Covers | Where I applied it |
 |---|---|---|
 | **[ITN](https://www.credly.com/badges/3a056378-cca0-47da-82e9-16a7086a0fbd/public_url)** — Introduction to Networks | IPv4/IPv6 addressing, subnetting, Ethernet, the protocol stack, Cisco IOS basics | Addressing plan and VLAN design in the [MikroTik ISP lab](https://github.com/sakib2588/mikrotik-isp-lab) |
-| **SRWE** — Switching, Routing, and Wireless Essentials | VLANs, trunking, STP, EtherChannel, inter-VLAN routing, DHCP, WLAN, first-hop redundancy | Tagged VLAN 100 access network and DHCP-served subscriber LAN in the same lab |
+| **[SRWE](https://www.credly.com/badges/749440df-451c-4607-b923-89590976b371/public_url)** — Switching, Routing, and Wireless Essentials | VLANs, trunking, STP, EtherChannel, inter-VLAN routing, DHCP, WLAN, first-hop redundancy | Tagged VLAN 100 access network and DHCP-served subscriber LAN in the same lab |
 | **[ENSA](https://www.credly.com/badges/5de94878-6906-4620-a076-efd961cf3d82/public_url)** — Enterprise Networking, Security, and Automation | OSPF, ACLs, NAT, WAN technologies, QoS, network security, SNMP, automation | Stateful firewall, masquerade NAT, PCQ shaping and SNMP polling on the provider edge |
 
-All three completed through Cisco Networking Academy and issued 9 August 2026. These are course badges, not the CCNA 200-301 certification — that exam is booked for 14 September 2026.
+All three completed through Cisco Networking Academy and issued 9 August 2026 — click any badge to verify it on Credly. These are course badges, not the CCNA 200-301 certification — that exam is booked for 14 September 2026.
 
 ### Other
 
