@@ -166,10 +166,13 @@ All three completed through Cisco Networking Academy and issued 9 August 2026 â€
 
 ### GitHub Activity
 
-![Stats](https://github-readme-stats.vercel.app/api?username=sakib2588&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
 ![Streak](https://streak-stats.demolab.com?user=sakib2588&theme=tokyonight&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sakib2588&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+<!-- Stats and Top Languages cards removed 2026-08-11: the public github-readme-stats.vercel.app
+     instance returns 503 DEPLOYMENT_PAUSED (free-tier limit). To restore, re-add:
+     ![Stats](https://github-readme-stats.vercel.app/api?username=sakib2588&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+     ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=sakib2588&layout=compact&theme=tokyonight&hide_border=true&langs_count=8)
+     Or self-host the project on your own Vercel account for a stable URL. -->
 
 </div>
 
