@@ -51,7 +51,7 @@ flowchart LR
 
 | Project | What it is | Status |
 |---|---|---|
-| **[MikroTik ISP Access Lab](https://github.com/sakib2588/mikrotik-isp-lab)** | Two-router RouterOS lab reproducing a BD ISP access network: PPPoE subscriber auth, NAT, stateful firewall, tagged VLAN 100, PCQ per-subscriber shaping, SNMP polling, Netwatch uplink watchdog. Every claim traces to a command that was actually run. | Phase 1 complete (10/20 tasks) |
+| **[MikroTik ISP Access Lab](https://github.com/sakib2588/mikrotik-isp-lab)** | Five-router RouterOS lab reproducing a BD ISP network end to end: PPPoE subscriber auth via FreeRADIUS, deterministic CGNAT (RFC 6598), OSPF + BGP backbone with a BDIX no-transit peering policy proven bidirectionally, stateful firewall, tagged VLAN 100, PCQ shaping, SNMP polling. Every claim traces to a command that was actually run. | Phase 2 core complete (17/21 tasks; MPLS + Zabbix cut for time, documented) |
 | **[Wazuh SOC Home Lab](https://github.com/sakib2588/wazuh-soc-home-lab)** | 4-OS fleet (Pop!\_OS, Arch, Raspberry Pi, Windows) reporting to a central Wazuh SIEM, Suricata NIDS on the Pi, 7 custom detection rules proven against live attack simulation. | Phases 3-4 complete |
 | **IDS Edge Compression** | Knowledge distillation + pruning + INT8 quantization for ML intrusion detection on edge. NF-UQ-NIDS-v2, 72.7M flows. | IEEE Access — under review |
 | **ML-Based IDS** | Conference work on ML intrusion detection. | ICCIT 2026 — submitting |
@@ -82,20 +82,25 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    accTitle: MikroTik ISP Access Lab
-    accDescr: A provider-edge router runs a PPPoE server on a tagged VLAN. A customer router has no internet path of its own and must authenticate a PPPoE session to reach the internet, which proves the access network is real rather than shortcut.
+    accTitle: MikroTik ISP Access and Backbone Lab
+    accDescr: A provider-edge router runs a PPPoE server authenticated against FreeRADIUS with deterministic CGNAT, on a tagged VLAN. A customer router has no internet path of its own and must authenticate a PPPoE session to reach the internet. The provider edge also peers over OSPF and BGP with a backbone router, which in turn peers with a simulated upstream transit AS and a simulated BDIX local exchange under a proven no-transit policy.
 
-    net["🌐 Internet"] --> pe["🛰️ CHR-PE · Provider Edge<br/>PPPoE server · NAT · firewall<br/>PCQ shaping · SNMP · Netwatch"]
+    net["🌐 Internet"] --> pe["🛰️ CHR-PE · Provider Edge<br/>PPPoE + FreeRADIUS · CGNAT<br/>firewall · PCQ · SNMP · Netwatch"]
     pe -- "VLAN 100 tagged" --> cpe["🏠 CHR-CPE · Customer Router<br/>PPPoE client · LAN DHCP"]
     cpe --> lan["💻 Subscriber LAN<br/>192.168.88.0/24"]
+    pe -- "OSPF + iBGP, AS 65001" --> core["🧭 CHR-CORE · Backbone"]
+    core -- "eBGP, AS 65002" --> upstream["☁️ CHR-UPSTREAM · simulated IIG"]
+    core -- "eBGP, AS 65100 · no-transit policy" --> bdix["🔀 CHR-BDIX · simulated local exchange"]
 
     classDef edge fill:#ede9fe,stroke:#6f42c1,stroke-width:2px,color:#3b1f6b
     classDef cust fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
     classDef infra fill:#f3f4f6,stroke:#6b7280,stroke-width:1px,color:#1f2937
+    classDef backbone fill:#fef3c7,stroke:#b45309,stroke-width:2px,color:#78350f
 
     class pe edge
     class cpe,lan cust
     class net infra
+    class core,upstream,bdix backbone
 ```
 
 ---
@@ -134,12 +139,13 @@ flowchart LR
 |---|---|---|
 | **[ITN](https://www.credly.com/badges/3a056378-cca0-47da-82e9-16a7086a0fbd/public_url)** — Introduction to Networks | IPv4/IPv6 addressing, subnetting, Ethernet, the protocol stack, Cisco IOS basics | Addressing plan and VLAN design in the [MikroTik ISP lab](https://github.com/sakib2588/mikrotik-isp-lab) |
 | **[SRWE](https://www.credly.com/badges/749440df-451c-4607-b923-89590976b371/public_url)** — Switching, Routing, and Wireless Essentials | VLANs, trunking, STP, EtherChannel, inter-VLAN routing, DHCP, WLAN, first-hop redundancy | Tagged VLAN 100 access network and DHCP-served subscriber LAN in the same lab |
-| **[ENSA](https://www.credly.com/badges/5de94878-6906-4620-a076-efd961cf3d82/public_url)** — Enterprise Networking, Security, and Automation | OSPF, ACLs, NAT, WAN technologies, QoS, network security, SNMP, automation | Stateful firewall, masquerade NAT, PCQ shaping and SNMP polling on the provider edge |
+| **[ENSA](https://www.credly.com/badges/5de94878-6906-4620-a076-efd961cf3d82/public_url)** — Enterprise Networking, Security, and Automation | OSPF, ACLs, NAT, WAN technologies, QoS, network security, SNMP, automation | Stateful firewall, masquerade NAT, PCQ shaping, SNMP polling, and now real OSPF + BGP on the backbone |
 
 All three completed through Cisco Networking Academy and issued 9 August 2026 — click any badge to verify it on Credly. These are course badges, not the CCNA 200-301 certification — that exam is booked for 14 September 2026.
 
 ### Other
 
+- [Microsoft Certified: Security Operations Analyst Associate (SC-200)](https://learn.microsoft.com/api/credentials/share/en-us/NAZMUSSAKIB-8418/597E4D9A7B2BF9C?sharingId=3F4C672955707C2) — Microsoft, August 2026, verified
 - [Google Cybersecurity Professional Certificate](https://www.credly.com/badges/1c5e3389-768d-44a6-92e8-c92211e55627/public_url) — verified badge
 - [EC-Council Network Defense Essentials](https://www.coursera.org/account/accomplishments/verify/UJ19ZORDK6KA) — verified
 - [Stanford / DeepLearning.AI — Supervised Machine Learning](https://www.coursera.org/account/accomplishments/verify/AZCMFN532NYG) — verified
@@ -150,7 +156,6 @@ All three completed through Cisco Networking Academy and issued 9 August 2026 �
 
 ## Currently
 
-- Phase 2 of the MikroTik ISP lab: OSPF, BGP, MPLS, RADIUS-backed subscriber auth
 - Preparing for CCNA 200-301 (exam booked 14 September 2026)
 - Writing my thesis framework on problem-space adversarial NIDS evaluation
 - Polishing two papers toward submission
